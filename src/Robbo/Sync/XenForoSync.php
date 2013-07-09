@@ -1,4 +1,4 @@
-<?php namespace Sync;
+<?php namespace Robbo\Sync;
 
 class XenForoSync {
 
@@ -25,7 +25,7 @@ class XenForoSync {
 		$dataType = str_replace('XenForo_DataWriter_', '', $class);
 		if (in_array($dataType, $writers))
 		{
-			$extend[] = 'Sync\\'.$dataType.'DataWriter';
+			$extend[] = 'Robbo\\Sync\\DataWriter\\'.$dataType.'DataWriter';
 		}
 	}
 

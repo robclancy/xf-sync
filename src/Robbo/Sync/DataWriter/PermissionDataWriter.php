@@ -1,4 +1,6 @@
-<?php namespace Sync;
+<?php namespace Robbo\Sync\DataWriter;
+
+use Robbo\Sync\XenForoSync;
 
 class PermissionDataWriter extends XFCP_PermissionDataWriter {
 

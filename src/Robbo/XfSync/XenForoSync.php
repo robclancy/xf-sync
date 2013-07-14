@@ -12,7 +12,7 @@ class XenForoSync {
 
 		$this->loadConfig($directory);
 
-		\XenForo_CodeEvent::addListener('load_class_datawriter', 'Robbo\Sync\Listener::extendClass');
+		\XenForo_CodeEvent::addListener('load_class_datawriter', 'Robbo\XfSync\Listener::extendClass');
 	}
 
 	public static function export($dataType)

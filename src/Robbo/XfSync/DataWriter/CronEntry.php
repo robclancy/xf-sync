@@ -1,7 +1,5 @@
 <?php namespace Robbo\XfSync\DataWriter;
 
-use Robbo\Sync\XenForoSync;
-
 class CronEntry extends XFCP_CronEntry {
 
 	use CommonTrait;

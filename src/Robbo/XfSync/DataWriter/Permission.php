@@ -1,7 +1,5 @@
 <?php namespace Robbo\XfSync\DataWriter;
 
-use Robbo\Sync\XenForoSync;
-
 class Permission extends XFCP_Permission {
 
 	use CommonTrait;

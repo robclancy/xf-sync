@@ -1,6 +1,6 @@
 <?php namespace Robbo\XfSync\DataWriter;
 
-use Robbo\Sync\XenForoSync;
+use Robbo\XfSync\XenForoSync;
 
 // I am sick of copy pasting all the things, let's just use a trait
 trait CommonTrait {

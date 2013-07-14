@@ -6,7 +6,8 @@ class Listener {
 	{
 		$writers = [
 			'RoutePrefix', 'Permission', 'PermissionGroup', 'PermissionInterfaceGroup',
-			'Template', 'AdminTemplate', 'Phrase', 'CodeEvent', 'CodeEventListener',
+			'Template', 'AdminTemplate', 'EmailTemplate', 'Phrase', 'CodeEvent', 
+			'CodeEventListener', 'Option'
 		];
 
 		$dataType = str_replace('XenForo_DataWriter_', '', $class);

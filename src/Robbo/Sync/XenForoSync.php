@@ -119,6 +119,16 @@ class XenForoSync {
 		return $this->saveDom($this->config->data.'/code_event_listeners.xml', $dom);
 	}
 
+	protected function exportOptions()
+	{
+		$model = $this->getModel('Option');
+		list ($dom, $root) = $this->createNewDom('optiongroups');
+
+		$model->appendOptionsAddOnXml($root, $this->config->id);
+
+		return $this->saveDom($this->config->data.'/options.xml', $dom);
+	}
+
 	protected function exportGeneric($type)
 	{
 		$snake = strtolower(\Zend_Filter::filterStatic($type, 'Word_CamelCaseToUnderscore'));

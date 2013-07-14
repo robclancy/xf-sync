@@ -4,8 +4,6 @@
 
 trait CommonTrait {
 
-	protected $syncResource;
-
 	protected function _postSave()
 	{
 		parent::_postSave();

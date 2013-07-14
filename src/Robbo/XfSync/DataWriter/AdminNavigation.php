@@ -1,4 +1,4 @@
-<?php namespace Robbo\Sync\DataWriter;
+<?php namespace Robbo\XfSync\DataWriter;
 
 use Robbo\Sync\XenForoSync;
 

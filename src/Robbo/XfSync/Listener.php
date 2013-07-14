@@ -1,4 +1,4 @@
-<?php namespace Robbo\Sync;
+<?php namespace Robbo\XfSync;
 
 class Listener {
 
@@ -13,7 +13,7 @@ class Listener {
 		$dataType = str_replace('XenForo_DataWriter_', '', $class);
 		if (in_array($dataType, $writers))
 		{
-			$extend[] = 'Robbo\\Sync\\DataWriter\\'.$dataType;
+			$extend[] = 'Robbo\\XfSync\\DataWriter\\'.$dataType;
 		}
 	}
 }

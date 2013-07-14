@@ -1,4 +1,4 @@
-<?php namespace Robbo\Sync;
+<?php namespace Robbo\XfSync;
 
 class XenForoSync {
 

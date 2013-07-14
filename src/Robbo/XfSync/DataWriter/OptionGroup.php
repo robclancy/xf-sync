@@ -1,8 +1,8 @@
-<?php namespace Robbo\Sync\DataWriter;
+<?php namespace Robbo\XfSync\DataWriter;
 
 use Robbo\Sync\XenForoSync;
 
-class Option extends XFCP_Option {
+class OptionGroup extends XFCP_OptionGroup {
 
 	use CommonTrait;
 

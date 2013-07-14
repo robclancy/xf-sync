@@ -25,7 +25,7 @@ class XenForoSync {
 		$dataType = str_replace('XenForo_DataWriter_', '', $class);
 		if (in_array($dataType, $writers))
 		{
-			$extend[] = 'Robbo\\Sync\\DataWriter\\'.$dataType.'DataWriter';
+			$extend[] = 'Robbo\\Sync\\DataWriter\\'.$dataType;
 		}
 	}
 

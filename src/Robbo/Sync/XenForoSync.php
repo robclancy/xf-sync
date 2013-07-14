@@ -106,7 +106,7 @@ class XenForoSync {
 
 		$model->appendEventsAddOnXml($root, $this->config->id);
 
-		return $this->saveDom($this->config->data.'code_events.xml', $dom);
+		return $this->saveDom($this->config->data.'/code_events.xml', $dom);
 	}
 
 	protected function exportCodeEventListeners()
@@ -116,7 +116,7 @@ class XenForoSync {
 
 		$model->appendEventListenersAddOnXml($root, $this->config->id);
 
-		return $this->saveDom($this->config->data.'code_event_listeners.xml', $dom);
+		return $this->saveDom($this->config->data.'/code_event_listeners.xml', $dom);
 	}
 
 	protected function exportGeneric($type)

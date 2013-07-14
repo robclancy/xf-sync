@@ -99,6 +99,16 @@ class XenForoSync {
 		$this->saveDom($this->config->data.'/route_prefixes.xml', $dom);
 	}
 
+	protected function exportCodeEvents()
+	{
+		$model = $this->getModel('CodeEvent');
+		list ($dom, $root) = $this->createNewDom('code_events');
+
+		$model->appendEventsAddOnXml($root, $this->config->id);
+
+		return $this->saveDom($this->config->data.'code_events.xml', $dom);
+	}
+
 	protected function exportGeneric($type)
 	{
 		$snake = strtolower(\Zend_Filter::filterStatic($type, 'Word_CamelCaseToUnderscore'));

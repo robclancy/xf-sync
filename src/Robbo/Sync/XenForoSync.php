@@ -129,6 +129,16 @@ class XenForoSync {
 		return $this->saveDom($this->config->data.'/options.xml', $dom);
 	}
 
+	protected function exportCron()
+	{
+		$model = $this->addonModel->getModel('Cron');
+		list ($dom, $root) = $this->createNewDom('cron');
+
+		$model->appendCronEntriesAddOnXml($root, $this->config->id);
+
+		return $this->saveDom($this->config->data.'/cron.xml', $dom);
+	}
+
 	protected function exportGeneric($type)
 	{
 		$snake = strtolower(\Zend_Filter::filterStatic($type, 'Word_CamelCaseToUnderscore'));

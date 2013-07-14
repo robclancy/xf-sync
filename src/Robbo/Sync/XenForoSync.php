@@ -109,6 +109,16 @@ class XenForoSync {
 		return $this->saveDom($this->config->data.'code_events.xml', $dom);
 	}
 
+	protected function exportCodeEventListeners()
+	{
+		$model = $this->getModel('CodeEvent');
+		list ($dom, $root) = $this->createNewDom('code_event_listeners');
+
+		$model->appendEventListenersAddOnXml($root, $this->config->id);
+
+		return $this->saveDom($this->config->data.'code_event_listeners.xml', $dom);
+	}
+
 	protected function exportGeneric($type)
 	{
 		$snake = strtolower(\Zend_Filter::filterStatic($type, 'Word_CamelCaseToUnderscore'));

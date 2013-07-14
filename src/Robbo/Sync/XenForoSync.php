@@ -131,7 +131,7 @@ class XenForoSync {
 
 	protected function exportCron()
 	{
-		$model = $this->addonModel->getModel('Cron');
+		$model = $this->getModel('Cron');
 		list ($dom, $root) = $this->createNewDom('cron');
 
 		$model->appendCronEntriesAddOnXml($root, $this->config->id);

@@ -191,15 +191,15 @@ class XenForoSync {
 		}
 
 		// We require a build.json file to get information about the add-on from
-		if ( ! file_exists($directory.'/xenbuild.json'))
+		if ( ! file_exists($directory.'/addon.json'))
 		{
-			throw new \RuntimeException('xenbuild.json not found.');
+			throw new \RuntimeException('addon.json not found.');
 		}
 
-		$config = json_decode(file_get_contents($directory.'/xenbuild.json'));
+		$config = json_decode(file_get_contents($directory.'/addon.json'));
 		if (is_null($config))
 		{
-			throw new \RuntimeException('xenbuild.json doesn\'t contain valid json');
+			throw new \RuntimeException('addon.json doesn\'t contain valid json');
 		}
 
 		$required = array('id', 'name', 'version');

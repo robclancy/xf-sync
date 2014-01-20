@@ -89,16 +89,6 @@ class XenForoSync {
 		return \XenForo_Application::getDb();
 	}
 
-	protected function exportAdminPermissions()
-	{
-		$model = $this->getModel('Admin');
-		list ($dom, $root) = $this->createNewDom('admin_permissions');
-
-		$model->appendAdminPermissionsAddOnXml($root, $this->config->id);
-
-		return $this->saveDom($this->config->data.'/admin_permissions.xml', $dom);
-	}
-
 	protected function exportRoutePrefixes()
 	{
 		$model = $this->getModel('RoutePrefix');
@@ -147,6 +137,16 @@ class XenForoSync {
 		$model->appendCronEntriesAddOnXml($root, $this->config->id);
 
 		return $this->saveDom($this->config->data.'/cron.xml', $dom);
+	}
+
+	protected function exportAdminPermissions()
+	{
+		$model = $this->getModel('Admin');
+		list ($dom, $root) = $this->createNewDom('admin_permissions');
+
+		$model->appendAdminPermissionsAddOnXml($root, $this->config->id);
+
+		return $this->saveDom($this->config->data.'/admin_permissions.xml', $dom);
 	}
 
 	protected function exportGeneric($type)
